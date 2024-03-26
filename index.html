@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="/html-css-projects/netflix-clone/style.css" />
+  <link rel="stylesheet" href="/html-css-projects/netflix-clone/pages/mylist.html">
+  <link rel="stylesheet" href="/html-css-projects/netflix-clone/index.html">
+  <link rel="stylesheet" href="/html-css-projects/netflix-clone/pages/series.html">
+  <link rel="stylesheet" href="/html-css-projects/netflix-clone/pages/movies.html">
+  <link rel="stylesheet" href="/html-css-projects/netflix-clone/pages/main.html">
+  <title>Netflix Clone</title>
+</head>
+
+<body>
+  <!-- nav -->
+  <div id="nav" class="nav">
+    <img class="nav__logo" src="https://exquisite-pegasus-b9abd5.netlify.app/images/netflix.svg" alt="" />
+    <ul class="dropdown">
+      <a style="text-decoration: none; color: #fff;" href="/html-css-projects//netflix-clone/index.html">
+        <li id="home">Home</li>
+      </a>
+      <a style="text-decoration: none; color: #fff;" href="/html-css-projects/netflix-clone/pages/series.html">
+        <li id="series">Series</li>
+      </a>
+      <a style="text-decoration: none; color: #fff;" href="/html-css-projects/netflix-clone/pages/movies.html">
+        <li id="movies">Movies</li>
+      </a>
+      <a style="text-decoration: none; color: #fff;" href="/html-css-projects/netflix-clone/pages/mylist.html">
+        <li id="list">My List</li>
+      </a>
+    </ul>
+
+    <label style="padding-left: 930px;" class="ui-switch">
+      <input type="checkbox">
+      <div class="slider">
+        <div class="circle"></div>
+      </div>
+    </label>
+
+  </div>
+
+  <!-- header -->
+  <header class="banner">
+    <div
+      style="background-image: linear-gradient(to right, rgb(16, 15, 15) 5%, rgba(0, 0, 0, 0) 90%), url(&quot;https://image.tmdb.org/t/p/original/mDeUmPe4MF35WWlAqj4QFX5UauJ.jpg&quot;);"
+      class="banner">
+      <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" class="banner__contents">
+        <h1 class="banner__title">No Way Up</h1>
+        <div class="banner__buttons">
+          <button class="banner__button">Play</button>
+          <button class="banner__button">My List</button>
+        </div>
+        <h1 class="banner__description">
+          Characters from different backgrounds are thrown together when the plane they're travelling on crashes into
+          the Pacific
+          Ocean. A nightmare fight for survival ensues with the air supply running out and dangers creeping in from all
+          sides.
+        </h1>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="poster">
+      <div id="row4">
+        <h1>Upcoming</h1>
+        <div class="swiper swiper-initialized swiper-horizontal swiper-pointer-events">
+          <div id="swiper4" class="swiper-wrapper movies" aria-live="polite"
+            style="cursor: grab; transform: translate3d(0px, 0px, 0px);">
+            <div class="movie swiper-slide swiper-slide-active" role="group" aria-label="1 / 20"
+              style="width: 144px; margin-right: 10px;"><img
+                src="https://image.tmdb.org/t/p/w300/wkfG7DaExmcVsGLR4kLouMwxeT5.jpg"></div>
+            <div class="movie swiper-slide swiper-slide-next" role="group" aria-label="2 / 20"
+              style="width: 144px; margin-right: 10px;"><img
+                src="https://image.tmdb.org/t/p/w300/rULWuutDcN5NvtiZi4FRPzRYWSh.jpg"></div>
+            <div class="movie swiper-slide" role="group" aria-label="3 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/ldfCF9RhR40mppkzmftxapaHeTo.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="4 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/8b8R8l88Qje9dn9OE8PY05Nxl1X.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="5 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/vAoubdb2TeqA9joJ7FBcchUMSC3.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="6 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/r65fWcFELCSeyyrkq5wY09EPSGN.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="7 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="8 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/A7EByudX0eOzlkQ2FIbogzyazm2.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="9 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/f4oZTcfGrVTXKTWg157AwikXqmP.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="10 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/pQYHouPsDw32FhDLr7E3jmw0WTk.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="11 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/vSzOobYVu16MogSALNg1bjTaGc.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="12 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/7Bd4EUOqQDKZXA6Od5gkfzRNb0.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="13 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/kQs6keheMwCxJxrzV83VUwFtHkB.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="14 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/hUu9zyZmDd8VZegKi1iK1Vk0RYS.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="15 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/v9f9MMrq2nGQrN7cHnQRmEq9lSE.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="16 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/yvnIWt2j8VnDgwKJE2VMiFMa2Qo.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="17 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/9u6HEtZJdZDjPGGJq6YEuhPnoan.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="18 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/nfs7DCYhgrEIgxKYbITHTzKsggf.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="19 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/6tHZ5McxDG2MiycCGvXPblObNHc.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="20 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/36pYugctLa70NmwMEgXTR1G31Kq.jpg">
+            </div>
+          </div><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span
+            class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span
+            class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span
+            class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span
+            class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span
+            class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+      </div>
+      <div id="row5">
+        <h1>Trending Now</h1>
+        <div class="swiper swiper-initialized swiper-horizontal swiper-pointer-events">
+          <div id="swiper5" class="swiper-wrapper movies" aria-live="polite"
+            style="cursor: grab; transform: translate3d(0px, 0px, 0px);">
+            <div class="movie swiper-slide swiper-slide-active" role="group" aria-label="1 / 20"
+              style="width: 144px; margin-right: 10px;"><img
+                src="https://image.tmdb.org/t/p/w300/sphnjjiYb50SbWMToW7fyGigH1n.jpg"></div>
+            <div class="movie swiper-slide swiper-slide-next" role="group" aria-label="2 / 20"
+              style="width: 144px; margin-right: 10px;"><img
+                src="https://image.tmdb.org/t/p/w300/bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg"></div>
+            <div class="movie swiper-slide" role="group" aria-label="3 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/buXHm2shttFRQIBsCFlv5L2TmKh.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="4 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/hmHA5jqxN3ESIAGx0jAwV7TJhTQ.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="5 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/8b8R8l88Qje9dn9OE8PY05Nxl1X.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="6 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/7O4iVfOMQmdCSxhOg1WnzG1AgYT.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="7 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/383PV0WolYYQvTriH0NfvMUA28R.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="8 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/rULWuutDcN5NvtiZi4FRPzRYWSh.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="9 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/4eWeXswkAUIvdVWFvPrUFu2TxuI.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="10 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/r65fWcFELCSeyyrkq5wY09EPSGN.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="11 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/sMp34cNKjIb18UBOCoAv4DpCxwY.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="12 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/d5NXSklXo0qyIYkgV94XAgMIckC.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="13 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/kCGlIMHnOm8JPXq3rXM6c5wMxcT.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="14 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/dqZENchTd7lp5zht7BdlqM7RBhD.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="15 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/wkfG7DaExmcVsGLR4kLouMwxeT5.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="16 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/cMD9Ygz11zjJzAovURpO75Qg7rT.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="17 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/ooo4D4kyZyFee5aiNfwZ43oKOkc.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="18 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/vAoubdb2TeqA9joJ7FBcchUMSC3.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="19 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/7lTnXOy0iNtBAdRP3TZvaKJ77F6.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="20 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/ywbacot78IuNhGW4uVZPxxxVTkm.jpg">
+            </div>
+          </div><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span
+            class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span
+            class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span
+            class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span
+            class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+      </div>
+      <div id="row0">
+        <h1>Top Rated Movies</h1>
+        <div class="swiper swiper-initialized swiper-horizontal swiper-pointer-events">
+          <div id="swiper0" class="swiper-wrapper movies" aria-live="polite"
+            style="cursor: grab; transform: translate3d(0px, 0px, 0px);">
+            <div class="movie swiper-slide swiper-slide-active" role="group" aria-label="1 / 20"
+              style="width: 144px; margin-right: 10px;"><img
+                src="https://image.tmdb.org/t/p/w300/wkfG7DaExmcVsGLR4kLouMwxeT5.jpg"></div>
+            <div class="movie swiper-slide swiper-slide-next" role="group" aria-label="2 / 20"
+              style="width: 144px; margin-right: 10px;"><img
+                src="https://image.tmdb.org/t/p/w300/rULWuutDcN5NvtiZi4FRPzRYWSh.jpg"></div>
+            <div class="movie swiper-slide" role="group" aria-label="3 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/sMp34cNKjIb18UBOCoAv4DpCxwY.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="4 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/wShcJSKMFg1Dy1yq7kEZuay6pLS.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="5 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/nKPoSD4pZ3s3CJ9g3cqWRcQ41TC.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="6 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/hu40Uxp9WtpL34jv3zyWLb5zEVY.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="7 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/95VlSEfLMqeX36UVcHJuNlWEpwf.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="8 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/ldfCF9RhR40mppkzmftxapaHeTo.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="9 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/yRZfiG1QpRkBc7fAmxfcR7Md5EC.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="10 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/8b8R8l88Qje9dn9OE8PY05Nxl1X.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="11 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/kCGlIMHnOm8JPXq3rXM6c5wMxcT.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="12 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/4eWeXswkAUIvdVWFvPrUFu2TxuI.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="13 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/h3jYanWMEJq6JJsCopy1h7cT2Hs.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="14 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/7IJ7F8tX7IAkpUdaGovOBJqORnJ.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="15 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/hhvMTxlTZtnCOe7YFhod9uz3m37.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="16 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/vAoubdb2TeqA9joJ7FBcchUMSC3.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="17 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/5a7cocgyVuFjYV71neDIGVzD6Yq.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="18 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/87goLbbqrJqAxqDS5cBsik1zKT.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="19 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/5qHoazZiaLe7oFBok7XlUhg96f2.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="20 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/r65fWcFELCSeyyrkq5wY09EPSGN.jpg">
+            </div>
+          </div><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span
+            class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span
+            class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span
+            class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+      </div>
+      <div id="row1">
+        <h1>Popular Movies</h1>
+        <div class="swiper swiper-initialized swiper-horizontal swiper-pointer-events">
+          <div id="swiper1" class="swiper-wrapper movies" aria-live="polite"
+            style="cursor: grab; transform: translate3d(0px, 0px, 0px);">
+            <div class="movie swiper-slide swiper-slide-active" role="group" aria-label="1 / 20"
+              style="width: 144px; margin-right: 10px;"><img
+                src="https://image.tmdb.org/t/p/w300/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg"></div>
+            <div class="movie swiper-slide swiper-slide-next" role="group" aria-label="2 / 20"
+              style="width: 144px; margin-right: 10px;"><img
+                src="https://image.tmdb.org/t/p/w300/3bhkrj58Vtu7enYsRolD1fZdja1.jpg"></div>
+            <div class="movie swiper-slide" role="group" aria-label="3 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/hek3koDUyRQk7FIhPXsa6mT2Zc3.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="4 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="5 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/ow3wq89wM8qd5X7hWKxiRfsFf9C.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="6 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="7 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/lfRkUr7DYdHldAqi3PwdQGBRBPM.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="8 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/qJ2tW6WMUDux911r6m7haRef0WH.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="9 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="10 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/8VG8fDNiy50H4FedGwdSVUPoaJe.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="11 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/q719jXXEzOoYaps6babgKnONONX.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="12 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="13 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="14 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="15 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/bX2xnavhMYjWDoZp1VM6VnU1xwe.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="16 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/aKuFiU82s5ISJpGZp7YkIr3kCUd.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="17 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/k9tv1rXZbOhH7eiCk378x61kNQ1.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="18 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/8SRUfRUi6x4O68n0VCbDNRa6iGL.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="19 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/74hLDKjD5aGYOotO6esUVaeISa2.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="20 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/8OKmBV5BUFzmozIC3pPWKHy17kx.jpg">
+            </div>
+          </div><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span
+            class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span
+            class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+      </div>
+      <div id="row2">
+        <h1>Top Rated Tv Shows</h1>
+        <div class="swiper swiper-initialized swiper-horizontal swiper-pointer-events">
+          <div id="swiper2" class="swiper-wrapper movies" aria-live="polite"
+            style="cursor: grab; transform: translate3d(0px, 0px, 0px);">
+            <div class="movie swiper-slide swiper-slide-active" role="group" aria-label="1 / 20"
+              style="width: 144px; margin-right: 10px;"><img
+                src="https://image.tmdb.org/t/p/w300/2Fja87aTeuXxTEI1MH2IuHHSsLq.jpg"></div>
+            <div class="movie swiper-slide swiper-slide-next" role="group" aria-label="2 / 20"
+              style="width: 144px; margin-right: 10px;"><img
+                src="https://image.tmdb.org/t/p/w300/jJrveQMHvzDvLaFaLiTfZ9y1Cg8.jpg"></div>
+            <div class="movie swiper-slide" role="group" aria-label="3 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/gGC7zSDgG0FY0MbM1pjfhTCWQBI.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="4 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/9jkThAGYj2yp8jsS6Nriy5mzKFT.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="5 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/ttiiwKozgWVQNnHtzvORPd7PyFc.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="6 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/hmHA5jqxN3ESIAGx0jAwV7TJhTQ.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="7 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/fNHBzjxsydcAssxXqb5IV2obDdU.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="8 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/v9nGSRx5lFz6KEgfmgHJMSgaARC.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="9 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/fxCgd9KZt06CxMDVztPEuV8F3b9.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="10 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/jmU8HlTDn87xmRqXagcL2swDr8I.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="11 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/ly7Mndsxgm3NEkPdYGDkxGRiJAZ.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="12 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/lQcE1AzjDP5zJRUW76PMRn7ai9W.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="13 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/xQ83cJA8AxoQMZe8ADApWrRZB1v.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="14 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/kAhi0xY6gIEMvHtmChC44pBwOWG.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="15 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/onmSVwYsPMYtO8OjLdjS8FfRNKb.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="16 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/7dFZJ2ZJJdcmkp05B9NWlqTJ5tq.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="17 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/3iNT3rKs8q7qDr1fWxfznimZ7JV.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="18 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/cmr5Z3F66aa3Qp4d1Q7VQWueimg.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="19 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/tZxusxFBfkxkFk7xgf0jAg1Xl3b.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="20 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/9oZjOh3Va3FsiLGouhSogFsBX9G.jpg">
+            </div>
+          </div><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span
+            class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+      </div>
+      <div id="row3">
+        <h1>Popular Tv Shows</h1>
+        <div class="swiper swiper-initialized swiper-horizontal swiper-pointer-events">
+          <div id="swiper3" class="swiper-wrapper movies" aria-live="polite">
+            <div class="movie swiper-slide swiper-slide-active" role="group" aria-label="1 / 20"
+              style="width: 144px; margin-right: 10px;"><img
+                src="https://image.tmdb.org/t/p/w300/dTiZBcnMHSMfc4QVIbgULIWPcwL.jpg"></div>
+            <div class="movie swiper-slide swiper-slide-next" role="group" aria-label="2 / 20"
+              style="width: 144px; margin-right: 10px;"><img
+                src="https://image.tmdb.org/t/p/w300/ztkUQFLlC19CCMYHW9o1zWhJRNq.jpg"></div>
+            <div class="movie swiper-slide" role="group" aria-label="3 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/7O4iVfOMQmdCSxhOg1WnzG1AgYT.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="4 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/fqldf2t8ztc9aiwn3k6mlX3tvRT.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="5 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/geCRueV3ElhRTr0xtJuEWJt6dJ1.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="6 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/cMD9Ygz11zjJzAovURpO75Qg7rT.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="7 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/e28OPG9HDfzEoXdlqgzqNUbGuTS.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="8 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/gdIrmf2DdY5mgN6ycVP0XlzKzbE.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="9 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/5ZFUEOULaVml7pQuXxhpR2SmVUw.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="10 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/6P6tXhjT5tK3qOXzxF9OMLlG7iz.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="11 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/b9mY0X5T20ZM073hoa5n0dgmbfN.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="12 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/xUfRZu2mi8jH6SzQEJGP6tjBuYj.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="13 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/fC2HDm5t0kHl7mTm7jxMR31b7by.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="14 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/zhdy3PcNVE15wj1wrxn45ARZBnx.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="15 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/i3U3J2MWovIBZBnZYYiOLBXqNJZ.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="16 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/hlLXt2tOPT6RRnjiUmoxyG1LTFi.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="17 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/hTP1DtLGFamjfu8WqjnuQdP1n4i.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="18 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/dMOpdkrDC5dQxqNydgKxXjBKyAc.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="19 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/2pnZWHg9E34LLwLBLYUPLdZwer8.jpg">
+            </div>
+            <div class="movie swiper-slide" role="group" aria-label="20 / 20" style="width: 144px; margin-right: 10px;">
+              <img src="https://image.tmdb.org/t/p/w300/sPkxHNw5BFvuCFGWw825TS7n6X3.jpg">
+            </div>
+          </div><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">© 2022 Steav Khet. All Rights Reserved.</p>
+  </main>
+
+  <!-- AOS library script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="/html-css-projects/netflix-clone/scripts/module/utils.js"></script>
+  <script src="/html-css-projects/netflix-clone/scripts/module/myassistant.js"></script>
+  <script src="/html-css-projects/netflix-clone/scripts/module/swiper.js"></script>
+
+  <!-- Your other scripts -->
+  <script>
+    AOS.init();
+  </script>
+
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY >= 100) {
+        nav.classList.add('nav__black');
+      } else {
+        nav.classList.remove('nav__black');
+      }
+    });
+  </script>
+</body>
+
+</html>
