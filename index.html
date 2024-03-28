@@ -18,6 +18,8 @@
     const types = ['movie', 'tv']
   </script>
   <script type="module" src="./scripts/home.js"></script>
+  <script type="module" src="./scripts/module/search.js"></script>
+  <script src="./scripts/module/header.js" defer></script>
   <title>Netflix Clone</title>
 </head>
 
@@ -40,13 +42,19 @@
       </a>
     </ul>
 
-    <label style="padding-left: 1380px;" class="ui-switch">
-      <input type="checkbox">
-      <div class="slider">
-        <div class="circle"></div>
+    <div class="container">
+      <input checked="" class="checkbox" type="checkbox">
+      <div class="mainbox">
+        <div class="iconContainer">
+          <svg viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="search_icon">
+            <path
+              d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z">
+            </path>
+          </svg>
+        </div>
+        <input class="search_input" placeholder="Search..." type="text">
       </div>
-    </label>
-
+    </div>
   </div>
 
   <!-- header -->
@@ -70,27 +78,31 @@
     </div>
   </header>
 
-  <div class="banner home">
-    <div class="banner-genres mobile"></div>
-  </div>
-
   <main>
-    <div class="poster"></div>
+    <div class="banner home">
+      <div class="banner-genres mobile"></div>
+    </div>
+
+    <main>
+      <div class="poster">
+      </div>
+    </main>
+
+    <section class="modal overlay">
+      <div class="modal-card card"></div>
+    </section>
+
+    <div class="iframe-wrapper overlay">
+      <iframe title="trailer"></iframe>
+    </div>
   </main>
-
-  <section class="modal overlay">
-    <div class="modal-card card"></div>
-  </section>
-
-  <div class="iframe-wrapper overlay">
-    <iframe title="trailer"></iframe>
-  </div>
 
   <!-- AOS library script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="/Netflix.com/scripts/module/utils.js"></script>
   <script src="/Netflix.com/scripts/module/myassistant.js"></script>
   <script src="/Netflix.com/scripts/module/swiper.js"></script>
+  <script src="/Netflix.com/scripts/module/search.js"></script>
 
   <!-- Your other scripts -->
   <script>

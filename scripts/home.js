@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const favElements = document.querySelectorAll('.fav');
+  const favElements = document.querySelectorAll('.fav');
 
-    // Add click event listener to each .fav element to toggle animation
-    favElements.forEach(function (favElement) {
-        favElement.addEventListener('click', function () {
-            // Toggle the 'animate' class for this specific favElement
-            favElement.classList.toggle('animate');
-        });
+  // Add click event listener to each .fav element to toggle animation
+  favElements.forEach(function (favElement) {
+    favElement.addEventListener('click', function () {
+      // Toggle the 'animate' class for this specific favElement
+      favElement.classList.toggle('animate');
     });
+  });
 });
 
 import createBanner from "./module/banner.js";
@@ -21,7 +21,7 @@ const titles = {
   3: "Popular Tv Shows",
 };
 
-getTrending("all").then(({ results }) => pushMovie(results, 5, null, titles[5]));
+getUpcoming().then(({ results }) => pushMovie(results, 4, "movie", titles[4]));
 
 getMovies().then((res) => {
   const [movies, tv] = res;
@@ -35,4 +35,4 @@ getMovies().then((res) => {
   });
 });
 
-getUpcoming().then(({ results }) => pushMovie(results, 4, "movie", titles[4]));
+getTrending("all").then(({ results }) => pushMovie(results, 5, null, titles[5]));
