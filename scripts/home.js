@@ -19,6 +19,8 @@ const titles = {
   1: "popular movies",
   2: "Top Rated Tv Shows",
   3: "Popular Tv Shows",
+  4: "Upcoming",
+  5: "Trending Now"
 };
 
 getUpcoming().then(({ results }) => pushMovie(results, 4, "movie", titles[4]));
