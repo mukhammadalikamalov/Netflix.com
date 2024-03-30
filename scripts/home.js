@@ -23,7 +23,7 @@ const titles = {
   5: "Trending Now"
 };
 
-getUpcoming().then(({ results }) => pushMovie(results, 4, "movie", titles[4]));
+getTrending("all").then(({ results }) => pushMovie(results, 5, null, titles[5]));
 
 getMovies().then((res) => {
   const [movies, tv] = res;
@@ -37,4 +37,5 @@ getMovies().then((res) => {
   });
 });
 
-getTrending("all").then(({ results }) => pushMovie(results, 5, null, titles[5]));
+getUpcoming().then(({ results }) => pushMovie(results, 4, "movie", titles[4]));
+
