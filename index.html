@@ -6,12 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="/Netflix.com/style.css" />
-  <link rel="stylesheet" href="/Netflix.com/pages/mylist.html">
+  <link rel="stylesheet" href="/Netflix.com/css/style.css" />
+  <link rel="stylesheet" href="./css/lightTheme.css">
+  <link rel="stylesheet" href="/Netflix.com/mylist.html">
   <link rel="stylesheet" href="/Netflix.com/index.html">
-  <link rel="stylesheet" href="/Netflix.com/pages/series.html">
-  <link rel="stylesheet" href="/Netflix.com/pages/movies.html">
-  <link rel="stylesheet" href="/Netflix.com/pages/main.html">
+  <link rel="stylesheet" href="/Netflix.com/series.html">
+  <link rel="stylesheet" href="/Netflix.com/movies.html">
+  <link rel="stylesheet" href="/Netflix.com/main.html">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script>
@@ -33,32 +34,42 @@
       <a style="text-decoration: none; color: #fff;" href="/Netflix.com/index.html">
         <li id="home">Home</li>
       </a>
-      <a style="text-decoration: none; color: #fff;" href="/Netflix.com/pages/series.html">
+      <a style="text-decoration: none; color: #fff;" href="/Netflix.com/series.html">
         <li id="series">Series</li>
       </a>
-      <a style="text-decoration: none; color: #fff;" href="/Netflix.com/pages/movies.html">
+      <a style="text-decoration: none; color: #fff;" href="/Netflix.com/movies.html">
         <li id="movies">Movies</li>
       </a>
-      <a style="text-decoration: none; color: #fff;" href="/Netflix.com/pages/mylist.html">
+      <a style="text-decoration: none; color: #fff;" href="/Netflix.com/mylist.html">
         <li id="list">My List</li>
       </a>
     </ul>
+    <div class="right-header">
+      <form style="margin-right: -95px; margin-top: -20px;" class="search">
+        <svg class="search-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+          <path fillrule="evenodd"
+            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+            cliprule="evenodd"></path>
+        </svg>
 
-    <form class="search">
-      <svg class="search-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-        <path fillrule="evenodd"
-          d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-          cliprule="evenodd"></path>
-      </svg>
+        <input type="text" placeholder="Search..." class="input" name="title">
 
-      <input type="text" placeholder="Search..." class="input" name="title">
+        <svg class="close-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+          <path
+            d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z">
+          </path>
+        </svg>
+      </form>
 
-      <svg class="close-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
-        <path
-          d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z">
-        </path>
-      </svg>
-    </form>
+      <div class="icons">
+        <button class="icon moon" onclick="toggleMode()">
+          <img src="images/moon.svg" alt="moon btn" />
+        </button>
+        <button class="icon sun" onclick="toggleMode()">
+          <img src="images/sun.svg" alt="sun btn" />
+        </button>
+      </div>
+    </div>
 
     <section class="search-movies">
       <div class="wrapper"></div>
@@ -90,8 +101,8 @@
     </div>
 
     <main>
-      <div class="poster">
-      </div>
+      <div class="poster"></div>
+      <p class="copyright">&copy; 2022 Steav Khet. All Rights Reserved.</p>
     </main>
 
     <section class="modal overlay">
@@ -100,7 +111,9 @@
     </section>
 
     <div class="iframe-wrapper overlay">
-      <iframe title="trailer"></iframe>
+      <iframe title="trailer"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
     </div>
   </main>
 

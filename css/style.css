@@ -32,7 +32,7 @@ body {
 
 .banner__contents {
   margin-left: 30px;
-  padding-top: 460px;
+  padding-top: 432px;
   height: 190px;
 }
 
@@ -44,13 +44,14 @@ body {
 }
 
 .banner__description {
-  width: 960px;
+  width: 940px;
   font-size: 17px;
   max-width: 960px;
   height: 180px;
   font-weight: 100;
   padding-left: 10px;
   padding-top: 20px;
+  line-height: 1.3rem;
 }
 
 .banner__button {
@@ -1043,9 +1044,13 @@ main .swiper {
   }
 }
 
+.search {
+  margin-bottom: 20px;
+  margin-left: 40px;
+}
+
 .search .input {
   max-width: 220px;
-  position: absolute;
   right: 0;
   font-size: 16px;
   padding: 10px;
@@ -1059,6 +1064,7 @@ main .swiper {
   transform-origin: right center;
   transition: transform 0.2s ease-in-out;
   margin-right: 100px;
+  margin-bottom: 20px;
 }
 
 .search .input::placeholder {
@@ -1132,9 +1138,18 @@ form.active .search-btn {
 
 svg.search-btn,
 svg.close-btn {
+  margin-top: 8px;
   width: 24px;
   transition: transform 0.2s ease-in-out;
   cursor: pointer;
+}
+
+svg.search-btn {
+  margin-top: 10px;
+}
+
+svg.close-btn {
+  margin-top: 12px;
 }
 
 svg.close-btn {
@@ -1384,5 +1399,84 @@ input:checked+.slider:before {
 
   form.active .search-btn {
     transform: translateX(-150px);
+  }
+}
+
+.right-header {
+  display: flex;
+  align-items: center;
+  padding-left: 1030px;
+  gap: 0;
+}
+
+.search .input {
+  max-width: 220px;
+  z-index: -1;
+  position: absolute;
+  right: 0;
+  font-size: 16px;
+  padding: 10px;
+  padding-left: 40px;
+  color: var(--white-darker);
+  outline: none;
+  border-radius: 5px;
+  background-color: #0008;
+  border: 1px solid #fff5;
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.search .input::placeholder {
+  color: var(--white-darker);
+}
+
+form.active .input {
+  transform: scaleX(1);
+}
+
+form.active .search-btn {
+  transform: translateX(-190px);
+}
+
+svg.search-btn,
+svg.close-btn {
+  width: 24px;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+svg.close-btn {
+  width: 1.2rem;
+  position: absolute;
+  right: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: none;
+}
+
+svg.close-btn.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media screen and (max-width: 390px) {
+  .search .input {
+    max-width: 180px;
+  }
+
+  form.active .search-btn {
+    transform: translateX(-150px);
+  }
+}
+
+@media screen and (max-width: 713px) {
+  .header {
+    padding: 0.8rem;
+    padding-inline: 20px;
+  }
+
+  .col:last-child {
+    gap: 8px;
   }
 }
