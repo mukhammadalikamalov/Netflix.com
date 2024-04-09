@@ -27,12 +27,13 @@ body {
   background-position: center center;
   color: white;
   object-fit: contain;
-  height: 740px;
+  height: 1000px;
+  max-height: 1100px;
 }
 
 .banner__contents {
   margin-left: 30px;
-  padding-top: 432px;
+  padding-top: 632px;
   height: 190px;
 }
 
@@ -44,9 +45,9 @@ body {
 }
 
 .banner__description {
-  width: 940px;
+  width: 1000px;
   font-size: 17px;
-  max-width: 960px;
+  max-width: 1000px;
   height: 180px;
   font-weight: 100;
   padding-left: 10px;
