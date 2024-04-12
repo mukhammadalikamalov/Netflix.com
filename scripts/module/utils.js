@@ -91,9 +91,8 @@ export const paintGenres = data => {
   let ul = document.createElement('ul')
   getDetail(data.media_type || data.type, data.id).then(({ genres }) => {
     const releaseYear = document.createElement('li')
-    releaseYear.innerText = `${
-      data.release_date?.split('-')[0] || data.first_air_date?.split('-')[0]
-    }`
+    releaseYear.innerText = `${data.release_date?.split('-')[0] || data.first_air_date?.split('-')[0]
+      }`
     ul.appendChild(releaseYear)
 
     genres.forEach(genre => {
@@ -109,12 +108,10 @@ export const paintGenres = data => {
 
 const paintCard = (data, card) => {
   const vote = data.vote_average
-  card.innerHTML = `<img src="${
-    data.poster_path && getMovieImage(data.poster_path, 'w342')
-  }">`
-  card.innerHTML += `<div><h3>${data.title || data.name}</h3><p>${
-    data.overview
-  }</p></div>`
+  card.innerHTML = `<img src="${data.poster_path && getMovieImage(data.poster_path, 'w342')
+    }">`
+  card.innerHTML += `<div><h3>${data.title || data.name}</h3><p>${data.overview
+    }</p></div>`
   card.append(ringRating(vote))
 
   let detail = card.querySelector('div')
@@ -152,9 +149,9 @@ export const createModal = data => {
   const card = document.querySelector('.modal .modal-card')
   card.style.backgroundImage = data.backdrop_path
     ? `linear-gradient(to right, #191919 50%, #0002), url(${getMovieImage(
-        data.backdrop_path,
-        'w1280'
-      )})`
+      data.backdrop_path,
+      'w1280'
+    )})`
     : noBgImage
 
   paintCard(data, card)
@@ -187,9 +184,8 @@ export const createMovie = (data, el, format) => {
   const movie = document.createElement('div')
   el.appendChild(movie)
   movie.classList.add('movie', 'swiper-slide')
-  movie.innerHTML = `<img src="${
-    data.poster_path && getMovieImage(data.poster_path, format)
-  }">`
+  movie.innerHTML = `<img src="${data.poster_path && getMovieImage(data.poster_path, format)
+    }">`
 
   movie.addEventListener('click', () => createModal(data))
 

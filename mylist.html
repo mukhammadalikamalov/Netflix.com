@@ -6,15 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="/Netflix.com/css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="/Netflix.com/css/mylist.css" />
     <link rel="stylesheet" href="/Netflix.com/mylist.html">
     <link rel="stylesheet" href="/Netflix.com/series.html">
     <link rel="stylesheet" href="/Netflix.com/movies.html">
     <link rel="stylesheet" href="/Netflix.com/index.html">
-    <script type="module" src="js/mylist.js"></script>
-    <script type="module" src="js/search.js"></script>
-    <script src="js/header.js" defer></script>
+    <link rel="stylesheet" href="./css/lightTheme.css">
+    <script>
+        const types = ['movie', 'tv']
+    </script>
+    <script type="module" src="./scripts/home.js"></script>
+    <script type="module" src="./scripts/search.js"></script>
+    <script src="./scripts/module/header.js" defer></script>
+    <script src="./scripts/module/banner.js"></script>
+    <script src="./scripts/module/poster.js"></script>
     <title>Netflix Clone</title>
 </head>
 
@@ -27,7 +33,7 @@
             <a style="text-decoration: none; color: #fff;" href="/Netflix.com/index.html">
                 <li id="home">Home</li>
             </a>
-            <a style="text-decoration: none; color: #fff;" href="/Netflix.com/series.htmls">
+            <a style="text-decoration: none; color: #fff;" href="/Netflix.com/series.html">
                 <li id="series">Series</li>
             </a>
             <a style="text-decoration: none; color: #fff;" href="/Netflix.com/movies.html">
@@ -37,16 +43,101 @@
                 <li id="list">My List</li>
             </a>
         </ul>
+        <div class="right-header">
+            <form style="margin-right: -95px; margin-top: -20px;" class="search">
+                <svg class="search-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    style="z-index: 99; margin-right: -10px;">
+                    <path style="z-index: 99;" fillrule="evenodd"
+                        d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                        cliprule="evenodd"></path>
+                </svg>
 
+                <input type="text" placeholder="Search..." class="input" name="title" style="z-index: 99;">
+
+                <svg class="close-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"
+                    style="z-index: 99;">
+                    <path
+                        d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z">
+                    </path>
+                </svg>
+            </form>
+
+            <div class="icons">
+                <button class="icon moon" onclick="toggleMode()">
+                    <img src="images/moon.svg" alt="moon btn" />
+                </button>
+                <button class="icon sun" onclick="toggleMode()">
+                    <img src="images/sun.svg" alt="sun btn" />
+                </button>
+            </div>
+        </div>
+
+        <section class="search-movies">
+            <div class="wrapper"></div>
+        </section>
     </div>
 
     <main data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+        <div class="movie_card" id="tomb">
+            <div class="info_section">
+                <div class="movie_header">
+                    <img class="locandina" src="https://mr.comingsoon.it/imgdb/locandine/235x336/53750.jpg" />
+                    <h1>Tomb Raider</h1>
+                    <h4>2018, Roar Uthaug</h4>
+                    <span class="minutes">125 min</span>
+                    <p class="type">Action, Fantasy</p>
+                </div>
+                <div class="movie_desc">
+                    <p class="text">
+                        Lara Croft, the fiercely independent daughter of a missing adventurer, must push herself beyond
+                        her
+                        limits when she finds herself on the island where her father disappeared.
+                    </p>
+                </div>
+            </div>
+            <div class="blur_back tomb_back"></div>
+        </div>
 
+        <div class="movie_card" id="ave">
+            <div class="info_section">
+                <div class="movie_header">
+                    <img class="locandina" src="https://mr.comingsoon.it/imgdb/locandine/235x336/53715.jpg" />
+                    <h1>Black Panther</h1>
+                    <h4>2018, Ryan Coogler</h4>
+                    <span class="minutes">134 min</span>
+                    <p class="type">Action, Adventure, Sci-Fi</p>
+                </div>
+                <div class="movie_desc">
+                    <p class="text">
+                        T'Challa, the King of Wakanda, rises to the throne in the isolated, technologically advanced
+                        African
+                        nation, but his claim is challenged by a vengeful outsider who was a childhood victim of
+                        T'Challa's
+                        father's mistake.
+                    </p>
+                </div>
+            </div>
+            <div class="blur_back ave_back"></div>
+        </div>
     </main>
 
-    <p class="copyright bottom">© 2022 Steav Khet. All Rights Reserved.</p>
+    <section class="search-movies">
+        <div class="wrapper"></div>
+    </section>
+
+    <main class="movie-list">
+        <div class="wrapper"></div>
+    </main>
+    <p class="copyright bottom">&copy; 2022 Steav Khet. All Rights Reserved.</p>
+
+    <section class="modal overlay">
+        <div class="modal-card card"></div>
+    </section>
 
     <!-- AOS library script -->
+    <script type="module" src="scripts/module/list.js"></script>
+    <script type="module" src="scripts/search.js"></script>
+    <script src="scripts/module/header.js" defer></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/Netflix.com/scripts/home.js"></script>
 
